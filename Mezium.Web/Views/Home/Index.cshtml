@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IReadOnlyCollection<StoryViewModel>
+
+@if (Model is null || Model.Count == 0)
+{
+    <h2>There are no stories yet</h2>
+    return;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="flex-column">
+    @foreach (var story in Model)
+    {
+        <div style="margin-bottom: 10px" class="card">
+            <div class="card-body">
+                <span style="font-size: 13px" class="fw-light">@story.AuthorName</span>
+                <a href="#">
+                    <h5 class="card-title">@story.Title</h5>
+                    <p class="card-text">@story.Description</p>
+                </a>
+                <span style="font-size: 13px" class="fw-light">@story.PublishDate.ToString("MMMd")</span>
+            </div>
+        </div>
+    }
 </div>
+
+
