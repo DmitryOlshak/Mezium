@@ -1,9 +1,16 @@
+using Mezium.Web.Infrastructure;
+using Mezium.Web.Infrastructure.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddInfrastructure();
+
 var app = builder.Build();
+
+await ApplicationDbContext.InitAsync();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
