@@ -2,11 +2,6 @@
 
 public class Story
 {
-    public Story()
-    {
-        
-    }
-    
     public Story(string authorName, string title, DateTimeOffset publishDate)
     {
         AuthorName = authorName;
@@ -15,10 +10,10 @@ public class Story
     }
 
     public int Id { get; set; }
-    public string AuthorName { get; set; }
-    public string Title { get; set; }
+    public string AuthorName { get; }
+    public string Title { get; }
     public string? Description { get; set; }
-    public DateTimeOffset PublishDate { get; set; }
+    public DateTimeOffset PublishDate { get; }
     
     public string? Content { get; set; }
 }

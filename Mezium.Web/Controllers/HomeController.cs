@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Mezium.Web.Application;
-using Mezium.Web.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Mezium.Web.Models;
 using Microsoft.EntityFrameworkCore;
