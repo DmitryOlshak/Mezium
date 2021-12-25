@@ -1,4 +1,4 @@
-﻿namespace Mezium.Web.Domain;
+﻿namespace Mezium.Domain;
 
 public class Story
 {

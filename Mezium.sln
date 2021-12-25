@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mezium.Web", "src\Mezium.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mezium.RestApi", "src\Mezium.RestApi\Mezium.RestApi.csproj", "{494FEF34-EE69-4F8C-9D30-B76665F64493}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mezium.Domain", "src\Mezium.Domain\Mezium.Domain.csproj", "{22FB6B8F-ED82-404B-8AFE-672CB27A18FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +22,14 @@ Global
 		{494FEF34-EE69-4F8C-9D30-B76665F64493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{494FEF34-EE69-4F8C-9D30-B76665F64493}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{494FEF34-EE69-4F8C-9D30-B76665F64493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FB6B8F-ED82-404B-8AFE-672CB27A18FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FB6B8F-ED82-404B-8AFE-672CB27A18FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FB6B8F-ED82-404B-8AFE-672CB27A18FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FB6B8F-ED82-404B-8AFE-672CB27A18FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5F6A2C47-C0CB-4F8A-B769-B573D7FE5BB7} = {75A1F65C-B2EF-4C66-ABAA-891CB1D1ACB5}
 		{494FEF34-EE69-4F8C-9D30-B76665F64493} = {75A1F65C-B2EF-4C66-ABAA-891CB1D1ACB5}
+		{22FB6B8F-ED82-404B-8AFE-672CB27A18FB} = {75A1F65C-B2EF-4C66-ABAA-891CB1D1ACB5}
 	EndGlobalSection
 EndGlobal

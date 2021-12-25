@@ -1,5 +1,5 @@
 ﻿using Mezium.Web.Application;
-using Mezium.Web.Domain;
+using Mezium.Domain;
 using Mezium.Web.Infrastructure.Persistence.ModelBuilders;
 using Microsoft.EntityFrameworkCore;
 

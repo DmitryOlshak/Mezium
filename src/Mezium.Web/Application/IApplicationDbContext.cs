@@ -1,4 +1,4 @@
-﻿using Mezium.Web.Domain;
+﻿using Mezium.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Mezium.Web.Application;
