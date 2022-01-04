@@ -1,5 +1,7 @@
+using Mezium.RestApi.Application;
 using Mezium.RestApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mezium.RestApi.Controllers;
 
@@ -7,15 +9,24 @@ namespace Mezium.RestApi.Controllers;
 [Route("[controller]")]
 public class StoriesController : ControllerBase
 {
-    [HttpGet]
-    public IEnumerable<Story> List()
+    private readonly IApplicationDbContext _dbContext;
+
+    public StoriesController(IApplicationDbContext dbContext)
     {
-        return Enumerable.Range(1, 5).Select(index => new Story()
+        _dbContext = dbContext;
+    }
+    
+    [HttpGet]
+    public async Task<IEnumerable<StoryModel>> List(CancellationToken token = default)
+    {
+        var stories = await _dbContext.Stories.ToListAsync(token);
+        
+        return stories.Select(story => new StoryModel()
             {
-                PublishDate = DateTimeOffset.UtcNow.AddDays(index),
-                AuthorName = "Random.Shared.Next(-20, 55)",
-                Title = "Summaries[Random.Shared.Next(Summaries.Length)]",
-                Description = "Summaries[Random.Shared.Next(Summaries.Length)]",
+                PublishDate = story.PublishDate,
+                AuthorName = story.AuthorName,
+                Title = story.Title,
+                Description = story.Description,
             })
             .ToArray();
     }
